@@ -474,48 +474,48 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
+        name: 'dashboard',
         icon: <FiShoppingBag />,
       },
     ],
   },
 
   {
-    title: 'Pages',
+    title: 'Inventory',
     links: [
-      {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
-      },
-      {
-        name: 'employees',
-        icon: <IoMdContacts />,
-      },
-      {
-        name: 'customers',
-        icon: <RiContactsLine />,
-      },
+      { name: 'item setup' },
+      { name: 'employees' },
+      { name: 'customers' },
     ],
   },
   {
-    title: 'Apps',
+    title: 'Purchases',
     links: [
-      {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: 'kanban',
-        icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
+      { name: 'vendors' },
+      { name: 'purchase orders' },
+      { name: 'purchase received' },
+      { name: 'purchase invoices' },
+      { name: 'purchase returns' },
+    ],
+  },
+  {
+    title: 'Sales',
+    links: [
+      { name: 'customers' },
+      { name: 'sales quotations' },
+      { name: 'sales orders' },
+      { name: 'delivery orders' },
+      { name: 'sales invoice' },
+    ],
+  },
+  {
+    title: 'Manufacturing',
+    links: [
+      { name: 'Build Of Material' },
+      { name: 'Job Orders' },
+      { name: 'Manufacturing Orders' },
+      { name: '' },
+      { name: 'Sales invoice' },
     ],
   },
   {

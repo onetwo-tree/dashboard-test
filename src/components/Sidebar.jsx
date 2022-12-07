@@ -4,7 +4,7 @@ import { SiSellfy } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { links } from '../data/dummy';
+import { links } from './sidebarlinks';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
@@ -38,11 +38,12 @@ const Sidebar = () => {
               </button>
             </TooltipComponent>
           </div>
+          {/* Sidebar Links */}
           <div className="mt-10 ">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
-                  {item.title}
+                <p className="text-gray-400 dark:text-gray-400 m-3 mt-3 uppercase">
+                  {item.title} <button type="button">Test</button>
                 </p>
                 {item.links.map((link) => (
                   <NavLink

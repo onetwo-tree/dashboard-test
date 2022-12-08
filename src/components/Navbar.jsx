@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlinePlus } from 'react-icons/ai';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
@@ -27,7 +27,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize, setColor } = useStateContext();
+  const { activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -39,6 +39,7 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // If screensize is below 900px, disable activeMenu
   useEffect(() => {
     if (screenSize <= 900) {
       setActiveMenu(false);
@@ -50,24 +51,36 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
+    // Left align Navlink Buttons
+    <div className="flex justify-between p-2 md:ml-6 md:mr-8 relative">
 
-      <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
+      {/* Left side Navbar Buttons */}
       <div className="flex">
-        <NavButton title="Chat" dotColor="#03C9D7" customFunc={() => handleClick('chat')} color={currentColor} icon={<BsChatLeft />} />
-        <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color={currentColor} icon={<RiNotification3Line />} />
-        <NavButton title="Avatar" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('userProfile')} color={currentColor} icon={<RiNotification3Line />} />
+        {/* setActiveMenu Sidebar Button */}
+        <NavButton title="Menu" customFunc={handleActiveMenu} color="#fafafa" icon={<AiOutlineMenu />} />
+        {/* New Task Button */}
+        <NavButton title="New Task" customFunc={() => handleClick('newtask')} color="#fafafa" icon={<AiOutlinePlus />} />
+      </div>
+
+      {/* Right side Navbar Buttons */}
+      <div className="flex">
+        {/* Chat Button */}
+        <NavButton title="Chat" dotColor="#03C9D7" customFunc={() => handleClick('chat')} color="#fafafa" icon={<BsChatLeft />} />
+        {/* Notifications Button */}
+        <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color="#fafafa" icon={<RiNotification3Line />} />
+        {/* Profile Button */}
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick('userProfile')}
           >
+            {/* Profile Avatar */}
             <img
               className="rounded-full w-8 h-8"
               src={avatar}
               alt="user-profile"
             />
-            <MdKeyboardArrowDown className="text-gray-400 text-14" />
+            <MdKeyboardArrowDown className="text-white text-14" />
           </div>
         </TooltipComponent>
 

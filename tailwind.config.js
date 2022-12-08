@@ -16,6 +16,7 @@ module.exports = {
         'secondary-dark-bg': '#171717', // Sidebar: Neutral 800
         'light-gray': '#a3a3a3', // Sidebar Link Hover: Neutral 400
         'half-transparent': 'rgba(0, 0, 0, 0.5)', // Pop-up Transparency
+        'neutral-white': '#fafafa', // Neutral White
       },
       borderWidth: {
         1: '1px',

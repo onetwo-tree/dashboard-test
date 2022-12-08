@@ -1,0 +1,115 @@
+import React from 'react';
+import { AiFillHome, AiFillSetting } from 'react-icons/ai';
+import { RiArrowDownSFill, RiArrowUpSFill, RiMenuFill, RiTaskFill } from 'react-icons/ri';
+import { IoCreate, IoPerson } from 'react-icons/io5';
+import { FaBomb } from 'react-icons/fa';
+import { GiFactory } from 'react-icons/gi';
+import { HiDocumentArrowUp, HiDocumentArrowDown, HiDocumentCheck, HiDocumentMinus, HiDocumentText } from 'react-icons/hi2';
+
+export const SidebarLinks = [
+  {
+    title: 'Dashboard',
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    links: [
+      {
+        name: 'dashboard',
+        path: '/dashboard',
+        icon: <AiFillHome />,
+      },
+    ],
+  },
+
+  {
+    title: 'Inventory',
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    links: [
+      { name: 'item setup',
+        path: '/item-setup',
+        icon: <IoCreate />,
+      },
+      { name: 'item category',
+        path: '/item-category',
+        icon: <RiMenuFill />,
+      },
+      { name: 'build of material',
+        path: '/build-of-material',
+        icon: <FaBomb />,
+      },
+    ],
+  },
+  {
+    title: 'Purchases',
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    links: [
+      { name: 'vendors',
+        path: '/vendors',
+        icon: <IoPerson />,
+      },
+      { name: 'purchase orders',
+        path: '/purchase-orders',
+        icon: <HiDocumentArrowUp />,
+      },
+      { name: 'purchase received',
+        path: '/purchase-received',
+        icon: <HiDocumentArrowDown />,
+      },
+      { name: 'purchase invoices',
+        path: '/purchase-invoices',
+        icon: <HiDocumentCheck />,
+      },
+      { name: 'purchase returns',
+        path: '/purchase-returns',
+        icon: <HiDocumentMinus />,
+      },
+    ],
+  },
+  {
+    title: 'Sales',
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    links: [
+      { name: 'customers',
+        path: '/customers',
+        icon: <IoPerson />,
+      },
+      { name: 'sales quotations',
+        path: '/sales-quotations',
+        icon: <HiDocumentText />,
+      },
+      { name: 'sales orders',
+        path: '/sales-orders',
+        icon: <HiDocumentArrowDown />,
+      },
+      { name: 'delivery orders',
+        path: '/delivery-orders',
+        icon: <HiDocumentArrowUp />,
+      },
+      { name: 'sales invoices',
+        path: '/sales-invoices',
+        icon: <HiDocumentCheck />,
+      },
+    ],
+  },
+  {
+    title: 'Manufacturing',
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+    links: [
+      { name: 'Job Orders',
+        path: '/job-orders',
+        icon: <RiTaskFill />,
+      },
+      { name: 'Manufacturing Orders',
+        path: '/manufacturing-orders',
+        icon: <GiFactory />,
+      },
+      { name: 'Manufacturing Setup',
+        path: '/manufacturing-setup',
+        icon: <AiFillSetting />,
+      },
+    ],
+  },
+];

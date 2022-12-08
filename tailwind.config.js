@@ -11,11 +11,11 @@ module.exports = {
         14: '14px',
       },
       backgroundColor: {
-        'main-bg': '#FAFBFB',
-        'main-dark-bg': '#20232A',
-        'secondary-dark-bg': '#33373E',
-        'light-gray': '#F7F7F7',
-        'half-transparent': 'rgba(0, 0, 0, 0.5)',
+        'main-bg': '#FAFAFA', // Light Mode: Neutral 50
+        'main-dark-bg': '#262626', // Dark Mode: Neutral 700
+        'secondary-dark-bg': '#171717', // Sidebar: Neutral 800
+        'light-gray': '#a3a3a3', // Sidebar Link Hover: Neutral 400
+        'half-transparent': 'rgba(0, 0, 0, 0.5)', // Pop-up Transparency
       },
       borderWidth: {
         1: '1px',

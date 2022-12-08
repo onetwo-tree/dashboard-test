@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SiSellfy } from 'react-icons/si';
+// Only including one arrowdown for MVP
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { links } from './sidebarlinks';
+import { SidebarLinks } from './SidebarData';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
@@ -16,6 +17,7 @@ const Sidebar = () => {
     }
   };
 
+  // Sidebar Hover & Active Link Colors & Shape
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
 
@@ -40,14 +42,17 @@ const Sidebar = () => {
           </div>
           {/* Sidebar Links */}
           <div className="mt-10 ">
-            {links.map((item) => (
+            {/* Importing SidebarData's title into sidebar */}
+            {SidebarLinks.map((item) => (
               <div key={item.title}>
+                {/* Sidebar Category Class */}
                 <p className="text-gray-400 dark:text-gray-400 m-3 mt-3 uppercase">
-                  {item.title} <button type="button">Test</button>
+                  {item.title}
                 </p>
+                {/* Importing Links under Categories  */}
                 {item.links.map((link) => (
                   <NavLink
-                    to={`/${link.name}`}
+                    to={link.path}
                     key={link.name}
                     onClick={handleCloseSideBar}
                     style={({ isActive }) => ({

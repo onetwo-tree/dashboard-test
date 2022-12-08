@@ -4,7 +4,11 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dashboard, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import {
+  Dashboard, ItemSetup, ItemCategory, BuildOfMaterial,
+  Vendors, PurchaseOrders, PurchaseReceived, PurchaseInvoices, PurchaseReturns,
+  Customers, SalesQuotations, SalesOrders, DeliveryOrders, SalesInvoices,
+  JobOrders, ManufacturingOrders, ManufacturingSetup } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -68,26 +72,29 @@ const App = () => {
                 <Route path="/" element={(<Dashboard />)} />
                 <Route path="/dashboard" element={(<Dashboard />)} />
 
-                {/* pages  */}
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/employees" element={<Employees />} />
+                {/* Inventory  */}
+                <Route path="/item-setup" element={(<ItemSetup />)} />
+                <Route path="/item-category" element={(<ItemCategory />)} />
+                <Route path="/build-of-material" element={(<BuildOfMaterial />)} />
+
+                {/* Purchases  */}
+                <Route path="/vendors" element={<Vendors />} />
+                <Route path="/purchase-orders" element={<PurchaseOrders />} />
+                <Route path="/purchase-received" element={<PurchaseReceived />} />
+                <Route path="/purchase-invoices" element={<PurchaseInvoices />} />
+                <Route path="/purchase-returns" element={<PurchaseReturns />} />
+
+                {/* Sales */}
                 <Route path="/customers" element={<Customers />} />
+                <Route path="/sales-quotations" element={<SalesQuotations />} />
+                <Route path="/sales-orders" element={<SalesOrders />} />
+                <Route path="/delivery-orders" element={<DeliveryOrders />} />
+                <Route path="/sales-invoices" element={<SalesInvoices />} />
 
-                {/* apps  */}
-                <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/calendar" element={<Calendar />} />
-                <Route path="/color-picker" element={<ColorPicker />} />
-
-                {/* charts  */}
-                <Route path="/line" element={<Line />} />
-                <Route path="/area" element={<Area />} />
-                <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
-                <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mapping" element={<ColorMapping />} />
-                <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} />
+                {/* Manufacturing  */}
+                <Route path="/job-orders" element={<JobOrders />} />
+                <Route path="/manufacturing-orders" element={<ManufacturingOrders />} />
+                <Route path="/manufacturing-setup" element={<ManufacturingSetup />} />
 
               </Routes>
             </div>

@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SiSellfy } from 'react-icons/si';
-// Only including one arrowdown for MVP
-import { MdOutlineCancel } from 'react-icons/md';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { SidebarLinks } from './SidebarData';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -26,19 +23,10 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+            {/* Top Left Icon & Link */}
+            <Link to="/dashboard" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
               <SiSellfy /> <span>SPADE 2.0</span>
             </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
-              <button
-                type="button"
-                onClick={() => setActiveMenu(!activeMenu)}
-                style={{ color: currentColor }}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
-              >
-                <MdOutlineCancel />
-              </button>
-            </TooltipComponent>
           </div>
           {/* Sidebar Links */}
           <div className="mt-10 ">

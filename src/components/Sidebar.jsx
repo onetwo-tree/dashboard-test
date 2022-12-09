@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SiSellfy } from 'react-icons/si';
+import { BsChevronDown } from 'react-icons/bs';
+import { MdOutlineCancel } from 'react-icons/md';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { SidebarLinks } from './SidebarData';
+import { SidebarData } from './SidebarData';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
@@ -27,29 +30,44 @@ const Sidebar = () => {
             <Link to="/dashboard" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
               <SiSellfy /> <span>SPADE 2.0</span>
             </Link>
+
+            {/* Minimized window close sidebar */}
+            <TooltipComponent content="Menu" position="BottomCenter">
+              <button
+                type="button"
+                onClick={() => setActiveMenu(!activeMenu)}
+                className="text-xl rounded-full p-3 text-white hover:bg-light-gray mt-4 mr-3 block md:hidden"
+              >
+                <MdOutlineCancel />
+              </button>
+            </TooltipComponent>
           </div>
+
           {/* Sidebar Links */}
-          <div className="mt-10 ">
+          <div className="mt-8 ">
             {/* Importing SidebarData's title into sidebar */}
-            {SidebarLinks.map((item) => (
-              <div key={item.title}>
+            {SidebarData.map((itemCategory) => (
+              <div>
                 {/* Sidebar Category Class */}
-                <p className="text-gray-400 dark:text-gray-400 m-3 mt-3 uppercase">
-                  {item.title}
-                </p>
+                <Link
+                  to="/"
+                  className="text-gray-400 m-3 mt-3 uppercase"
+                >
+                  {itemCategory.title} <BsChevronDown />
+                </Link>
                 {/* Importing Links under Categories  */}
-                {item.links.map((link) => (
+                {itemCategory.subNav.map((pageLink) => (
                   <NavLink
-                    to={link.path}
-                    key={link.name}
+                    to={pageLink.path}
+                    key={pageLink.name}
                     onClick={handleCloseSideBar}
                     style={({ isActive }) => ({
                       backgroundColor: isActive ? currentColor : '',
                     })}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}
                   >
-                    {link.icon}
-                    <span className="capitalize ">{link.name}</span>
+                    {pageLink.icon}
+                    <span className="capitalize ">{pageLink.name}</span>
                   </NavLink>
                 ))}
               </div>

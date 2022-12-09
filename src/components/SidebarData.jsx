@@ -6,14 +6,15 @@ import { FaBomb } from 'react-icons/fa';
 import { GiFactory } from 'react-icons/gi';
 import { HiDocumentArrowUp, HiDocumentArrowDown, HiDocumentCheck, HiDocumentMinus, HiDocumentText } from 'react-icons/hi2';
 
-export const SidebarLinks = [
+export const SidebarData = [
   {
     title: 'Dashboard',
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-    links: [
+    icon: <AiFillHome />,
+    subNav: [
       {
-        name: 'dashboard',
+        name: 'home',
         path: '/dashboard',
         icon: <AiFillHome />,
       },
@@ -24,7 +25,7 @@ export const SidebarLinks = [
     title: 'Inventory',
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-    links: [
+    subNav: [
       { name: 'item setup',
         path: '/item-setup',
         icon: <IoCreate />,
@@ -43,7 +44,7 @@ export const SidebarLinks = [
     title: 'Purchases',
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-    links: [
+    subNav: [
       { name: 'vendors',
         path: '/vendors',
         icon: <IoPerson />,
@@ -70,7 +71,7 @@ export const SidebarLinks = [
     title: 'Sales',
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-    links: [
+    subNav: [
       { name: 'customers',
         path: '/customers',
         icon: <IoPerson />,
@@ -97,7 +98,7 @@ export const SidebarLinks = [
     title: 'Manufacturing',
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-    links: [
+    subNav: [
       { name: 'Job Orders',
         path: '/job-orders',
         icon: <RiTaskFill />,

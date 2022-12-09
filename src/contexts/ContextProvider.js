@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
+// Initial State of Icons on Navigation Bar
 const initialState = {
   chat: false,
   cart: false,
@@ -16,23 +17,28 @@ export const ContextProvider = ({ children }) => {
   const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
-  const [activeSubnav, setActiveSubnav] = useState(false);
+  const [subnav, setSubnav] = useState(false);
 
   const setMode = (e) => {
     setCurrentMode(e.target.value);
     localStorage.setItem('themeMode', e.target.value);
   };
 
+  // Change theme colors for ToolTipComponent
   const setColor = (color) => {
     setCurrentColor(color);
     localStorage.setItem('colorMode', color);
   };
 
+  // Handle Initial State Clicks
   const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
+
+  // Sidebar Navigation Trigger
+  const showSubnav = () => setSubnav(!subnav);
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <StateContext.Provider value={{ activeSubnav, setActiveSubnav, currentColor, currentMode, activeMenu, screenSize, setScreenSize, handleClick, isClicked, initialState, setIsClicked, setActiveMenu, setCurrentColor, setCurrentMode, setMode, setColor, themeSettings, setThemeSettings }}>
+    <StateContext.Provider value={{ showSubnav, subnav, setSubnav, currentColor, currentMode, activeMenu, screenSize, setScreenSize, handleClick, isClicked, initialState, setIsClicked, setActiveMenu, setCurrentColor, setCurrentMode, setMode, setColor, themeSettings, setThemeSettings }}>
       {children}
     </StateContext.Provider>
   );

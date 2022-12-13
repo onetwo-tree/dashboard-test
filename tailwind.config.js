@@ -11,12 +11,17 @@ module.exports = {
         14: '14px',
       },
       backgroundColor: {
-        'main-bg': '#FAFAFA', // Light Mode: Neutral 50
-        'main-dark-bg': '#262626', // Dark Mode: Neutral 700
-        'secondary-dark-bg': '#171717', // Sidebar: Neutral 800
-        'light-gray': '#a3a3a3', // Sidebar Link Hover: Neutral 400
         'half-transparent': 'rgba(0, 0, 0, 0.5)', // Pop-up Transparency
-        'neutral-white': '#fafafa', // Neutral White
+        'neutral-50': '#fafafa', // Neutral White
+        'neutral-100': '#f5f5f5', //
+        'neutral-200': '#e5e5e5', //
+        'neutral-300': '#d4d4d4', //
+        'neutral-400': '#a3a3a3', // Neutral Gray
+        'neutral-500': '#737373', //
+        'neutral-600': '#525252', //
+        'neutral-700': '#404040', //
+        'neutral-800': '#262626', //
+        'neutral-900': '#171717', // Neutral Black
       },
       borderWidth: {
         1: '1px',

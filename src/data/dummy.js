@@ -1,12 +1,9 @@
 import React from 'react';
-import { AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { RiStockLine } from 'react-icons/ri';
+import { FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -466,95 +463,6 @@ export const employeesGrid = [
     textAlign: 'Center' },
 ];
 
-export const links = [
-  {
-    title: 'Dashboard',
-    links: [
-      {
-        name: 'dashboard',
-        icon: <FiShoppingBag />,
-      },
-    ],
-  },
-
-  {
-    title: 'Inventory',
-    links: [
-      { name: 'item setup' },
-      { name: 'employees' },
-      { name: 'customers' },
-    ],
-  },
-  {
-    title: 'Purchases',
-    links: [
-      { name: 'vendors' },
-      { name: 'purchase orders' },
-      { name: 'purchase received' },
-      { name: 'purchase invoices' },
-      { name: 'purchase returns' },
-    ],
-  },
-  {
-    title: 'Sales',
-    links: [
-      { name: 'customers' },
-      { name: 'sales quotations' },
-      { name: 'sales orders' },
-      { name: 'delivery orders' },
-      { name: 'sales invoice' },
-    ],
-  },
-  {
-    title: 'Manufacturing',
-    links: [
-      { name: 'Build Of Material' },
-      { name: 'Job Orders' },
-      { name: 'Manufacturing Orders' },
-      { name: '' },
-      { name: 'Sales invoice' },
-    ],
-  },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
-
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
-];
-
 export const cartData = [
   {
     image:
@@ -576,37 +484,6 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$190',
-  },
-];
-
-export const chatData = [
-  {
-    image:
-      avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
-    time: '9:08 AM',
-  },
-  {
-    image:
-      avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
-    time: '11:56 AM',
-  },
-  {
-    image:
-      avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
-    time: '4:39 AM',
-  },
-  {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
   },
 ];
 
@@ -815,30 +692,6 @@ export const medicalproBranding = {
     },
   ],
 };
-
-export const userProfileData = [
-  {
-    icon: <BsCurrencyDollar />,
-    title: 'My Profile',
-    desc: 'Account Settings',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
-  },
-  {
-    icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
-    iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
-  },
-  {
-    icon: <FiCreditCard />,
-    title: 'My Tasks',
-    desc: 'To-do and Daily Tasks',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-  },
-];
 
 export const ordersGrid = [
   {

@@ -12,7 +12,7 @@ const Dashboard = () => {
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map((item) => (
-            <div key={item.title} className="bg-white h-44 dark:text-gray-200 dark:bg-neutral-700 md:w-56  p-4 pt-9 rounded-2xl ">
+            <div key={item.title} className="bg-white h-44 dark:text-gray-400 dark:bg-neutral-600 md:w-56  p-4 pt-9 rounded-2xl ">
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}

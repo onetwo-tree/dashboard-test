@@ -8,7 +8,7 @@ const Notification = () => {
   const { currentColor } = useStateContext();
 
   return (
-    <div className="nav-item absolute right-5 md:right-39 top-16 bg-neutral-50 dark:bg-neutral-700 p-8 rounded-lg w-96">
+    <div className="nav-item absolute right-5 md:right-39 top-16 bg-neutral-50 dark:bg-neutral-800 p-8 rounded-lg w-96">
       <div className="flex justify-between items-center">
 
         {/* Justify-between left side (Notifcations | "5 New" Button) */}

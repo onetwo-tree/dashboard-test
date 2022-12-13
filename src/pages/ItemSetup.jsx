@@ -1,8 +1,9 @@
 import React from 'react';
+import { AddForm } from '../components/AddForm';
 
 const ItemSetup = () => {
   return (
-    <div>ItemSetup</div>
+    <div className="text-gray-400">Item Setup</div>
   );
 };
 

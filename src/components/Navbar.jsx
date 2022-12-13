@@ -9,6 +9,7 @@ import { Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
+  // Navbar icons configuration
   <TooltipComponent content={title} position="BottomCenter">
     <button
       type="button"

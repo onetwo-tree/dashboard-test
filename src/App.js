@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
-        <div className="flex relative dark:bg-neutral-600">
+        <div className="flex relative dark:bg-neutral-800">
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-neutral-800 ">
               <Sidebar />
@@ -43,12 +43,12 @@ const App = () => {
             className={
               activeMenu
               // Main Content BG color
-                ? 'dark:bg-neutral-800  bg-neutral-50 min-h-screen md:ml-72 w-full  '
-                : 'bg-neutral-50 dark:bg-neutral-800  w-full min-h-screen flex-2 '
+                ? 'dark:bg-neutral-700  bg-neutral-50 min-h-screen md:ml-72 w-full  '
+                : 'bg-neutral-50 dark:bg-neutral-700  w-full min-h-screen flex-2 '
             }
           >
             {/* NavBar BG color */}
-            <div className="fixed md:static bg-neutral-100 dark:bg-neutral-700 navbar w-full ">
+            <div className="fixed md:static bg-neutral-100 dark:bg-neutral-800 navbar w-full ">
               <Navbar />
             </div>
             <div>

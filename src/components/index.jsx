@@ -11,4 +11,5 @@ export { default as UserProfile } from './UserProfile';
 export { default as NewTask } from './NewTask';
 export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
+export { default as AddForm } from './AddForm';
 

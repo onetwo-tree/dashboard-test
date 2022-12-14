@@ -15,4 +15,5 @@ export { default as SalesInvoices } from './SalesInvoices';
 export { default as JobOrders } from './JobOrders';
 export { default as ManufacturingOrders } from './ManufacturingOrders';
 export { default as ManufacturingSetup } from './ManufacturingSetup';
+export { default as ItemCreate } from './ItemCreate';
 

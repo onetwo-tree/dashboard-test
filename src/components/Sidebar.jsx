@@ -48,12 +48,11 @@ const Sidebar = () => {
             {SidebarData.map((itemCategory) => (
               <div>
                 {/* Sidebar Category Class */}
-                <Link
-                  to="/"
+                <span
                   className="text-gray-400 m-3 mt-3 uppercase"
                 >
                   {itemCategory.title}
-                </Link>
+                </span>
                 {/* Importing Links under Categories  */}
                 {itemCategory.subNav.map((pageLink) => (
                   <NavLink

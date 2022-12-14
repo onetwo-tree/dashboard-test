@@ -35,7 +35,7 @@ const App = () => {
             </div>
           ) : (
             // Sidebar BG color
-            <div className="w-0 dark:bg-sidebar-bg">
+            <div className="w-0 bg-sidebar-bg dark:bg-sidebar-bg">
               <Sidebar />
             </div>
           )}
@@ -43,7 +43,7 @@ const App = () => {
             className={
               activeMenu
               // Main Content BG color
-                ? 'dark:bg-main-content-bg min-h-screen md:ml-72 w-full  '
+                ? 'dark:bg-main-content-bg min-h-screen md:ml-72 w-full '
                 : 'dark:bg-main-content-bg  w-full min-h-screen flex-2 '
             }
           >

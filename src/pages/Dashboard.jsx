@@ -8,7 +8,7 @@ const Dashboard = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className="mt-24">
+    <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map((item) => (

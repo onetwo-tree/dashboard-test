@@ -11,6 +11,11 @@ module.exports = {
         14: '14px',
       },
       backgroundColor: {
+        'main-content-bg': '#404040',
+        'sidebar-bg': '#262626',
+        'sidebar-activeLink': '#e5e5e5',
+        'sidebar-normalLink': '#e5e5e5',
+        'navbar-bg': '#525252',
         'half-transparent': 'rgba(0, 0, 0, 0.5)', // Pop-up Transparency
         'neutral-50': '#fafafa', // Neutral White
         'neutral-100': '#f5f5f5', //

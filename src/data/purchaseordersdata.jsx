@@ -631,6 +631,13 @@ export const contextMenuItems = [
 ];
 
 export const ordersGrid = [
+  { type: 'checkbox', width: '50' },
+  {
+    field: 'OrderID',
+    headerText: 'PO Number',
+    width: '120',
+    textAlign: 'Center',
+  },
   { field: 'CustomerName',
     headerText: 'Customer Name',
     width: '150',
@@ -657,12 +664,6 @@ export const ordersGrid = [
     field: 'OrderItems',
     textAlign: 'Center',
     width: '120',
-  },
-  {
-    field: 'OrderID',
-    headerText: 'Order ID',
-    width: '120',
-    textAlign: 'Center',
   },
 
   {
